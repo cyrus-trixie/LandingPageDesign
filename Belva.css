@@ -1,7 +1,16 @@
+/*@font-face {
+    font-family: 'Belva';
+    font-weight: bold;
+    src: url(/indigo/Indigo_PersonalUse.otf) format('truetype');
+}*/
+
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    
+    
 }
 
 #header {
@@ -62,7 +71,7 @@ body {
     border-radius: 5px;
     height: 450px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Belva';
     font-weight: 100;
     font-size: large;
     color: white;
@@ -72,65 +81,22 @@ body {
     background-size: cover;
 }
 
-.content1, .content2 {
+.content1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding:3em;
+    margin-bottom: 2em; /* Added space between content1 and content2 */
+    border: 1px solid black;
+}
+
+.content2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 3em;
 }
-#logo{
-    position:relative;
+img#KenyaContent{
+    width: 500px;
 }
-#logo img{
-display: block;
-}
-#img1{
-    width: 400px;
-    
-}
-#img2{
-    height: 350px;
-    width: 400px;
-    position: absolute;
-    top: 50px;
-    left: 40px;
-    
-}
-#img3{
-    width: 120px;
-    position: absolute;
-    left: 60px;
-    top: 285px;
-    
-}
-#logo2{
-    position:relative;
-    margin-bottom: 20px;
-}
-#logo2 img{
-display: block;
-}
-#img4{
-    width: 400px;
-    
-}
-#img5{
-    height: 350px;
-    width: 400px;
-    position: absolute;
-    top: 50px;
-    left: 40px;
-    
-}
-#img6{
-    width: 120px;
-    position: absolute;
-    left: 60px;
-    top: 285px;
-    
-}
-
-
-
 
 #kenya, #Ghana {
     font-family: Arial, Helvetica, sans-serif;
@@ -150,7 +116,7 @@ display: block;
     border: none;
     background-color: rgba(0, 0, 255, 0.904);
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Belva';
     margin: 10px;
     width: 200px;
 }
@@ -159,7 +125,8 @@ display: block;
     color: white;
     text-decoration: none;
 }
-#overlay1{
+
+#overlay1 {
     background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
     position: absolute;
     top: 0;
@@ -175,18 +142,18 @@ display: block;
     border-radius: 5px;
     font-size: 1.2em;
 }
+
 .about {
     text-align: center;
     position: relative;
- background: url(/george-bakos-CSILNyGeikU-unsplash.jpg);
- background-repeat: no-repeat;
- background-position: center center;
- background-size: cover;
- height: 400px;
-
+    background: url(/george-bakos-CSILNyGeikU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
     margin-top: 30px;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Belva';
     padding: 20px;
 }
 
@@ -200,7 +167,7 @@ display: block;
     border: none;
     background-color: rgba(0, 0, 255, 0.904);
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Belva';
     margin: 10px;
     width: 300px;
 }
@@ -208,7 +175,7 @@ display: block;
 .footer {
     color: rgba(0, 0, 0, 0.925);
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Belva';
     padding: 20px;
 }
 
@@ -243,7 +210,7 @@ display: block;
 
 .footer footer li {
     font-size: small;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Belva';
 }
 
 .footer footer li a {
@@ -259,12 +226,108 @@ display: block;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
+    /* iPad */
+    #header ul {
+        justify-content: center;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    #navbar img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .content {
+        height: 300px;
+    }
+
     .content1, .content2 {
         grid-template-columns: 1fr;
+        padding: 1em;
+    }
+
+    .content1 {
+        margin-bottom: 1em; /* Maintain space between content1 and content2 on iPad */
+    }
+
+    .about {
+        height: 300px;
+    }
+
+    .footer img {
+        width: 150px;
+    }
+
+    .footer button {
+        width: 200px;
+    }
+}
+
+@media (max-width: 780px) {
+    /* Mobile */
+    #header ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #header ul li {
+        padding: 10px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #navbar img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .content {
+        height: 250px;
+        width: 100%; /* Make sure the content takes full width */
+    }
+
+    .content1, .content2 {
+        grid-template-columns: 1fr;
+        padding: 1em;
+    }
+
+    .content1 {
+        margin-bottom: 6em; /* Maintain space between content1 and content2 on mobile */
+    }
+
+    .about {
+        height: 550px;
+        
     }
 
     .about p, .footer p {
         margin-left: 20px;
+        text-align: center;
+    }
+
+    .footer img {
+        width: 100px;
+    }
+
+    .footer button {
+        width: 150px;
+    }
+
+    .footer footer ul {
+        flex-direction: row;
+    }
+
+    .footer footer li {
+        margin-bottom: 10px;
     }
 }
