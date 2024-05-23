@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="bg-brand-tlg-ten px-8">
+        <div class="flex flex-col sm:flex-row w-full">
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center">
+                <div class="flex flex-col max-w-md gap-y-3 md:gap-y-6 pt-0 pb-8 sm:py-12 px-8 sm:px-4 lg:px-0">
+                    <h2 class="text-brand-green text-center md:text-left tracking-tight">Requirements</h2>
+                    <ul class="text-basic-black list-disc">
+                        <li>Copies of identification</li>
+                        <li>Invoices and/or importation documents</li>
+                        <li>Copy of KRA PIN</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 bg-contain bg-no-repeat bg-top min-h-72" style="background-image: url('/KenyaContent.png');"></div>
+        </div>
+    </section>
+
+</body>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',    'brand-light-green': '#82AD37',
+         'brand-dark-green': '#054E3B',
+         'brand-green': '#037856',
+         'brand-bright-green': '#77BC22',
+         'brand-tlg-twenty' : 'rgba(130, 173, 55, 0.2)',
+         'brand-tlg-five' : 'rgba(130, 173, 55, 0.05)',
+         'brand-tlg-ten' : 'rgba(130, 173, 55, 0.1)',
+         'basic-black' : '#272727',
+         'required-red' : '#CD201F',
+        //  'text-muted' : 'rgba(46, 62, 57, 0.5)',
+        //  'semi-black' : '#18181B',
+        //  'off-black' : '#1E1E1E',
+        //  'tinted-black' : '#383A47',
+         'gray-one' : '#F2F2F2',
+         'gray-two' : '#EDEDEB',
+         'gray-three' : '#D8D8D8',
+         'stroke' : '#E8E8E8',
+         'approved-blue' : '#40C9AB',
+         'pending-yellow' : '#DBA400',
+         'denied-red' : '#CA4B3D',
+         'theme-dark-blue' : '#181E58',
+          }
+        }
+      }
+    }
+  </script>
+</html>
